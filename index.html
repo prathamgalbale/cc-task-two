@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="body">
+ 
+        <div class="details">
+          <div class="text">PLAYING FROM YOUR LIBRARY</div>
+          <div class="coverPhoto"></div>
+          <div class="songName">Song Name</div>
+          <div class="singer">Artist</div>
+        </div>
+     
+        <div class="buttons">
+          <div class="previous" onclick="prevTrack()">
+            <i class="previousIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960"  fill="black"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Z"/></svg>
+            </i>
+          </div>
+          <div class="playPause" onclick="playpauseTrack()">
+            <i class="playIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960"  fill="black"><path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>            </i>
+          </div>
+          <div class="forward" onclick="nextTrack()">
+            <i class="forwardIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960"  fill="black"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Z"/></svg>
+            </i>
+          </div>
+        </div>
+     
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100"
+            value="0" class="seek_slider" onchange="seekTo()">
+          <div class="total-duration">00:00</div>
+        </div>
+     
+        <div class="slider_container">
+          <i class="volumeDown">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M200-360v-240h160l200-200v640L360-360H200Zm440 40v-322q45 21 72.5 65t27.5 97q0 53-27.5 96T640-320Z"/></svg>
+          </i>
+          <input type="range" min="1" max="100"
+            value="99" class="volume_slider" onchange="setVolume()">
+          <i class="volumeUp">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320Z"/></svg>
+          </i>
+        </div>
+      </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
